@@ -1,0 +1,13 @@
+/* style.css */
+
+.todo-form {
+    display: none;   /* hidden initially */
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 300px;
+
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
