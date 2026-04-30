@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,29 +10,33 @@
 
     <h1>Todo List</h1>
 
-    <!-- Button should be outside -->
     <button class="newtodo">NewTodo</button>
 
-    <!-- Hidden div -->
-    <div class="todo-form">
+    <form class="todo-form">
+
         <label for="title">Title</label>
-        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="title"  required placeholder="Enter title" />
 
         <label for="description">Description</label>
-        <input type="text" id="description" placeholder="Description">
+        <input type="text" id="description" placeholder="Enter description" />
 
         <label for="date">Date</label>
-        <input type="date" id="date">
+        <input type="date" id="date" required />
 
         <label for="priority">Priority</label>
-        <select name="priority" id="priority">
-            <option value="high">High</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
+        <select id="priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
         </select>
-    </div>
+
+        <button type="submit" id="submit">Submit</button>
+        <button type="button" id="cancel">Cancel</button>
+
+    </form>
+
+    <div id="output"></div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
