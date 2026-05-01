@@ -38,7 +38,7 @@ function renderTodos() {
             <span class="todo-title"><b>${todo.title}</b></span>
             <span class="todo-date">${todo.date}</span>            
             <span class="todo-priority">${todo.priority}</span>  
-            <button class="edit_btn" data-index="${index}">edit</button>     
+            <button class="edit_btn" data-index="${index}">Edit</button>     
             <button class="del_btn" data-index="${index}">Del</button>
         </div>
     `).join("");

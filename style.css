@@ -1,63 +1,127 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body {
-    font-family: Arial;
-    padding: 30px;
+    max-width: 600px;         /* Keeps the app from stretching too wide on big screens */
+    margin: 40px auto;        /* Centers the app on the page */
+    padding: 20px;
+    background-color: #f4f7f6; /* Soft light gray background */
+    color: #333;
 }
 
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+/* --- Buttons --- */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s; /* Smooth color change on hover */
+}
+/* The big 'NewTodo' button */
+.newtodo {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71; /* Green */
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.newtodo:hover {
+    background-color: #27ae60;
+}
+
+/* --- Form Styling --- */
 .todo-form {
-    display: none;
+    display: none; /* Hidden by default, JS toggles it to 'flex' */
     flex-direction: column;
     gap: 10px;
-    width: 300px;
-    margin-top: 20px;
+    background-color: white;
     padding: 20px;
-    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
-input,
-select,
-button {
+.todo-form label {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #555;
+}
+
+.todo-form input, 
+.todo-form select {
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-#output {
-    margin-top: 30px;
-    width: 400px;
+#submit {
+    background-color: #3498db; /* Blue */
+    color: white;
+    margin-top: 10px;
+}
+#submit:hover { background-color: #2980b9; }
+
+#cancel {
+    background-color: #95a5a6; /* Gray */
+    color: white;
+}
+#cancel:hover { background-color: #7f8c8d; }
+
+/* --- Todo Items --- */
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgb(176, 110, 110);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow */
 }
 
-/* Makes the title take up the most available space, pushing date/priority to the right */
 .todo-title {
-    flex-grow: 1; 
+    flex-grow: 1; /* Pushes the date and buttons to the right */
+    font-size: 16px;
 }
 
-/* Makes the checkbox a little bigger and easier to click */
+.todo-date, 
+.todo-priority {
+    font-size: 13px;
+    color: #011724;
+    background-color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
 .todo-checkbox {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
+    accent-color: #2ecc71; /* Makes the checkmark green on modern browsers */
 }
 
-/* Styling for the new View button */
-.edit_btn {
-    padding: 5px 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.del_btn{
-     padding: 5px 10px;
-    background-color: #262a2f;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.view-btn:hover {
-    background-color: #0056b3;
-}
 .todo-checkbox:checked ~ span {
     text-decoration: line-through;
-    color: #888; /* This makes the crossed-out text look grayed-out and completed */
+    color: #aaa;
+    opacity: 0.7;
 }
+.edit_btn {
+    background-color: #605b44; /* Yellow */
+    color: #f9f8f8;
+}
+.edit_btn:hover { background-color: #f39c12; }
+
+.del_btn {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+.del_btn:hover { background-color: #c0392b; }
