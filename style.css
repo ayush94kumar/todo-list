@@ -21,7 +21,7 @@ button {
 
 #output {
     margin-top: 30px;
-    width: 300px;
+    width: 400px;
 }
 
 /* Makes the title take up the most available space, pushing date/priority to the right */
@@ -37,9 +37,17 @@ button {
 }
 
 /* Styling for the new View button */
-.view-btn {
+.edit_btn {
     padding: 5px 10px;
     background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.del_btn{
+     padding: 5px 10px;
+    background-color: #262a2f;
     color: white;
     border: none;
     border-radius: 3px;
